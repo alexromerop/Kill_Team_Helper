@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.kill_team_helper"
-        minSdk 23
+        minSdk 24
         targetSdk 31
         versionCode 1
         versionName "1.0"

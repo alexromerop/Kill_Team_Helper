@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kill_team_helper/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.22864583333333333" />
         <entry key="..\:/Kill_team_helper/app/src/main/res/layout/activity_main.xml" value="0.20520833333333333" />
         <entry key="..\:/Kill_team_helper/app/src/main/res/layout/content_main.xml" value="0.20520833333333333" />
+        <entry key="..\:/Kill_team_helper/app/src/main/res/layout/drag_and_drop.xml" value="0.36666666666666664" />
         <entry key="..\:/Kill_team_helper/app/src/main/res/layout/fragment_first.xml" value="0.20520833333333333" />
         <entry key="..\:/Kill_team_helper/app/src/main/res/layout/fragment_second.xml" value="0.20520833333333333" />
         <entry key="..\:/Kill_team_helper/app/src/main/res/layout/test_layout.xml" value="0.3500905797101449" />

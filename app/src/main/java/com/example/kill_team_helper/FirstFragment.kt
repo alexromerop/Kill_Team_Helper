@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_first.view.*
+import java.io.InputStream
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -16,7 +17,7 @@ class FirstFragment : Fragment() {
     private lateinit var communicator: Communicator
 
     override fun onCreateView(
-         inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
 
@@ -26,10 +27,14 @@ class FirstFragment : Fragment() {
 
 
 
-        view.sendbtn.setOnClickListener(){
-            communicator.passDataCom(view.stats_ally_Atk_id.text.toString(),view.Dmg_ally_stat_id.text.toString(),view.stats_ally_BS_id.text.toString(),view.stats_ally_Critic_id.text.toString(),view.textView_Defense_id.text.toString())
-
-
+        view.sendbtn.setOnClickListener() {
+            communicator.passDataCom(
+                view.stats_ally_Atk_id.text.toString(),
+                view.Dmg_ally_stat_id.text.toString(),
+                view.stats_ally_BS_id.text.toString(),
+                view.stats_ally_Critic_id.text.toString(),
+                view.textView_Defense_id.text.toString()
+            )
 
 
         }
@@ -37,8 +42,6 @@ class FirstFragment : Fragment() {
 
 
     }
-
-
 
 
 }
