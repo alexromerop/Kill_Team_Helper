@@ -49,6 +49,14 @@ class KillteamInsideActivity() : AppCompatActivity() {
 
                 startActivity(intent)
             }
+            var button2 :Button = findViewById(R.id.button2)
+            button.setOnClickListener{
+                val intent = Intent(this, EquipmentActivity::class.java)
+                intent.putExtra("KILLTEAM_IDs", killteamInsideId)
+
+
+                startActivity(intent)
+            }
 
         }
 
