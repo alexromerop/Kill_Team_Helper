@@ -5,12 +5,13 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.kill_team_helper.R
-import com.example.kill_team_helper.database.Faction
+import com.example.kill_team_helper.database.Equipment
+import com.example.kill_team_helper.database.Killteam
 
-class FactionAdapter(factionSet: HashMap<String, Faction>, val context: Context) :
+class EquipmentsAdapter(killteamSet: HashMap<String, Equipment>, val context: Context) :
     RecyclerView.Adapter<FactionViewHolder>() {
 
-    val factionList = factionSet.toList()
+    val killteamList = killteamSet.toList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FactionViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
@@ -21,10 +22,10 @@ class FactionAdapter(factionSet: HashMap<String, Faction>, val context: Context)
     }
 
     override fun onBindViewHolder(holder: FactionViewHolder, position: Int) {
-        holder.renderFaction(factionList[position].second, factionList[position].first)
+        holder.renderEquipmeent(killteamList[position].second, killteamList[position].first)
     }
 
     override fun getItemCount(): Int {
-        return factionList.size
+        return killteamList.size
     }
 }

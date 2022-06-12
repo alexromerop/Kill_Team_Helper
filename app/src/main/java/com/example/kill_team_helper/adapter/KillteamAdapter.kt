@@ -21,7 +21,7 @@ class KillteamAdapter(killteamSet: HashMap<String, Killteam>, val context: Conte
     }
 
     override fun onBindViewHolder(holder: FactionViewHolder, position: Int) {
-        holder.render(killteamList[position].second, killteamList[position].first)
+        holder.renderKillTeam(killteamList[position].second, killteamList[position].first)
     }
 
     override fun getItemCount(): Int {

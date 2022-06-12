@@ -41,5 +41,8 @@
     <string name="total_dmg">Total_DMG</string>
     <string name="error">ERROR</string>
     <string name="calculate">Calculate</string>
+    <string name="todo">TODO</string>
+    <string name="todo3">TODO</string>
+    <string name="tododf">TODO</string>
 
 </resources>

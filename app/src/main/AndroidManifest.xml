@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.kill_team_helper">
 
     <application
@@ -10,8 +11,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kill_team_helper">
         <activity
-            android:name=".KillteamActivity"
+            android:name=".EquipmentActivity"
             android:exported="false" />
+        <activity
+            android:name=".KillteamInsideActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KillteamActivity"
+            android:exported="false"
+            tools:ignore="DuplicateActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

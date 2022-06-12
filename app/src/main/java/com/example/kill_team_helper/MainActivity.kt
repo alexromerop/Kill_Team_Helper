@@ -161,7 +161,9 @@ class MainActivity : AppCompatActivity() {
 
                     fireteams_list[fireteamid]= Fireteam(factionid,killteamid,fireteamid,description,fireteamname,archetype,fireteamcomp,killteammax,operatives_list)
                 }
+
                 killteams_list[killteamid]= Killteam(factionid,killteamid,killteamname,description,killteamcomp,equipments_list,ploys_list,fireteams_list)
+                Basedades.listKillTeam.add(Killteam(factionid,killteamid,killteamname,description,killteamcomp,equipments_list,ploys_list,fireteams_list))
             }
 
             faction_list[factionid]= Faction(factionid,factionname,description,killteams_list)
@@ -183,12 +185,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.factionList.adapter = FactionAdapter(Basedades, this)
 
-
-
-
-//        val fragmentA = FirstFragment()
-//        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragmentA)
-//            .commit()
 
     }
 

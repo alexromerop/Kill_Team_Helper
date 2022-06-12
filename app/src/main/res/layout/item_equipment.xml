@@ -4,32 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="20dp">
-
-    <ImageView
-        android:id="@+id/ivFaction"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:background="@color/black"
-        android:contentDescription="@string/todo3" />
+    android:layout_marginTop="20dp"
+    android:background="#58BBFD">
 
     <TextView
         android:id="@+id/tvEquipmentName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@+id/ivFaction"
+        android:layout_marginBottom="50dp"
+        android:textColor="#33691E"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="hola" />
+        tools:text="Name" />
 
     <TextView
         android:id="@+id/tvEquipmentDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        app:layout_constraintStart_toEndOf="@+id/ivFaction"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="textStart"
+        android:textColor="#004D40"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvEquipmentName"
         tools:text="des" />
 

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="20dp"
+    tools:ignore="MissingDefaultResource">
+
+    <ImageView
+        android:id="@+id/ivKillteamInside"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:contentDescription="@string/todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@color/black" />
+
+    <TextView
+        android:id="@+id/tvKillteamName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivKillteamInside"
+        tools:text="hola" />
+
+    <TextView
+        android:id="@+id/tvKillteamDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKillteamName"
+        tools:text="des" />
+
+    <TextView
+        android:id="@+id/tvKillteamComp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKillteamDesc"
+        tools:text="Desc" />
+
+    <Button
+        android:id="@+id/button_equipment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Equipments"
+
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button_ploys" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="FireTeams"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvKillteamComp" />
+
+    <Button
+        android:id="@+id/button_ploys"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ploys"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/button_equipment"
+        app:layout_constraintTop_toTopOf="@+id/button2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
