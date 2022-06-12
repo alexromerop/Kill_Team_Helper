@@ -1,6 +1,6 @@
 package com.example.kill_team_helper.database
 
-public class Equipment (
+data class Equipment (
                        val factionid: String,
                        val killteamid: String,
                        val eqid: String,

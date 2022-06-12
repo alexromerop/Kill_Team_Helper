@@ -27,17 +27,7 @@ class FirstFragment : Fragment() {
 
 
 
-        view.sendbtn.setOnClickListener() {
-            communicator.passDataCom(
-                view.stats_ally_Atk_id.text.toString(),
-                view.Dmg_ally_stat_id.text.toString(),
-                view.stats_ally_BS_id.text.toString(),
-                view.stats_ally_Critic_id.text.toString(),
-                view.textView_Defense_id.text.toString()
-            )
 
-
-        }
         return view
 
 

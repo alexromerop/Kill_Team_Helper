@@ -6,7 +6,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.android.synthetic.main.fragment_second.view.*
 import kotlinx.coroutines.flow.callbackFlow
 
 /**
@@ -29,30 +28,6 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        val view = inflater.inflate(R.layout.fragment_second, container, false)
-
-        Res1 = arguments?.getString("res1")
-        Res2 = arguments?.getString("res2")
-        Res3 = arguments?.getString("res3")
-        Res4 = arguments?.getString("res4")
-        Res5 = arguments?.getString("res5")
-        Res6 = arguments?.getString("res6")
-        Res7 = arguments?.getString("res7")
-        Res8 = arguments?.getString("res8")
-
-
-        var hits = arrayOf<Int>(
-            0, 0,
-        )
-        hits = Calc_hits(Res1, Res2, Res3)
-
-        view.Res_1.text = hits[0].toString()
-        view.Res_2.text = Res2
-        view.Res_3.text = Res3
-
-
-
 
 
 

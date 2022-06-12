@@ -4,15 +4,18 @@ import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.example.kill_team_helper.adapter.FactionAdapter
 import com.example.kill_team_helper.database.*
+import com.example.kill_team_helper.databinding.ActivityMainBinding
 import org.json.JSONObject
 import java.io.IOException
 import java.io.InputStream
 
 
 
-class MainActivity : AppCompatActivity(), Communicator {
+class MainActivity : AppCompatActivity() {
 
+    lateinit var binding: ActivityMainBinding
 
     private fun loadJSONFromAsset(context: Context): JSONObject? {
 
@@ -174,38 +177,22 @@ class MainActivity : AppCompatActivity(), Communicator {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        loadJSONFromAsset(this)
 
-        val fragmentA = FirstFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragmentA)
-            .commit()
-
-    }
+        binding.factionList.adapter = FactionAdapter(Basedades, this)
 
 
-    override fun passDataCom(
-        editTextInput: String,
-        edit1: String,
-        edit2: String,
-        edit3: String,
-        edit4: String
-    ) {
-        val bundle = Bundle()
-        bundle.putString("res1", editTextInput)
-        bundle.putString("res2", edit1)
-        bundle.putString("res3", edit2)
 
 
-        val transaction = this.supportFragmentManager.beginTransaction()
-        val fragmentB = SecondFragment()
-        fragmentB.arguments = bundle
-
-        //esto envia los valores
-        transaction.replace(R.id.fragment_container, fragmentB)
-        transaction.commit()
-
+//        val fragmentA = FirstFragment()
+//        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, fragmentA)
+//            .commit()
 
     }
+
+
 
 
 }
