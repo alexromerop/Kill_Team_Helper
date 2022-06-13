@@ -34,6 +34,7 @@ class KillteamInsideActivity() : AppCompatActivity() {
 
         val killTeam = Basedades.listKillTeam.find { it.killteamid == killteamInsideId}
         killTeam?.let {
+
             Toast.makeText(this,it.killteamname, Toast.LENGTH_SHORT).show()
             val image: ImageView = findViewById(R.id.ivKillteamInside)
             image.setImageDrawable(this.getDrawable(R.drawable.ic_launcher_background))
@@ -50,13 +51,17 @@ class KillteamInsideActivity() : AppCompatActivity() {
                 startActivity(intent)
             }
             var button2 :Button = findViewById(R.id.button2)
-            button.setOnClickListener{
-                val intent = Intent(this, EquipmentActivity::class.java)
-                intent.putExtra("KILLTEAM_IDs", killteamInsideId)
+            button2.setOnClickListener{
+                Toast.makeText(this, "Not Implemented", Toast.LENGTH_SHORT).show()
 
-
-                startActivity(intent)
             }
+
+            var buttonploys :Button = findViewById(R.id.button_ploys)
+            buttonploys.setOnClickListener{
+                Toast.makeText(this, "Not Implemented", Toast.LENGTH_SHORT).show()
+
+            }
+
 
         }
 

@@ -44,5 +44,8 @@
     <string name="todo">TODO</string>
     <string name="todo3">TODO</string>
     <string name="tododf">TODO</string>
+    <string name="equipments">Equipments</string>
+    <string name="fireteams">FireTeams</string>
+    <string name="ploys">Ploys</string>
 
 </resources>

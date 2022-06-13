@@ -51,7 +51,7 @@
         android:id="@+id/button_equipment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Equipments"
+        android:text="@string/equipments"
 
 
         app:layout_constraintStart_toStartOf="parent"
@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="FireTeams"
+        android:text="@string/fireteams"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvKillteamComp" />
 
@@ -70,7 +70,7 @@
         android:id="@+id/button_ploys"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ploys"
+        android:text="@string/ploys"
         app:layout_constraintEnd_toStartOf="@+id/button2"
         app:layout_constraintStart_toEndOf="@+id/button_equipment"
         app:layout_constraintTop_toTopOf="@+id/button2" />

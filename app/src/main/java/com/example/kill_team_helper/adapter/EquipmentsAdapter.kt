@@ -17,7 +17,7 @@ class EquipmentsAdapter(killteamSet: HashMap<String, Equipment>, val context: Co
         val layoutInflater = LayoutInflater.from(parent.context)
         return FactionViewHolder(
             context,
-            layoutInflater.inflate(R.layout.item_faction, parent, false)
+            layoutInflater.inflate(R.layout.item_equipment, parent, false)
         )
     }
 

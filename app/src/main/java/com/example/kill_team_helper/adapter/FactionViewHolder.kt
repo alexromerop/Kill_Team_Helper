@@ -13,17 +13,20 @@ import com.example.kill_team_helper.R
 import com.example.kill_team_helper.database.Equipment
 import com.example.kill_team_helper.database.Faction
 import com.example.kill_team_helper.database.Killteam
+import com.example.kill_team_helper.databinding.ItemEquipmentBinding
+import com.example.kill_team_helper.databinding.ItemFactionBinding
 
 class FactionViewHolder(val context:Context, val view: View):RecyclerView.ViewHolder(view) {
 
-    private val image: ImageView = view.findViewById(R.id.ivFaction)
-    private val name: TextView = view.findViewById(R.id.tvEquipmentName)
-    private val description: TextView = view.findViewById(R.id.tvEquipmentDesc)
+
 
     fun renderFaction(faction: Faction, id: String){
-        image.setImageDrawable(context.getDrawable(R.drawable.ic_launcher_background))
+        val image: ImageView = view.findViewById(R.id.ivFaction)
+        val name: TextView = view.findViewById(R.id.tvEquipmentName)
+        val description: TextView = view.findViewById(R.id.tvEquipmentDesc)
         name.text = faction.factionname
         description.text = faction.description
+        image.setImageDrawable(context.getDrawable(R.drawable.ic_launcher_background))
 
         view.setOnClickListener {
             val intent = Intent(context, KillteamActivity::class.java)
@@ -33,6 +36,9 @@ class FactionViewHolder(val context:Context, val view: View):RecyclerView.ViewHo
     }
 
     fun renderKillTeam(killteam: Killteam, id: String){
+        val image: ImageView = view.findViewById(R.id.ivFaction)
+        val name: TextView = view.findViewById(R.id.tvEquipmentName)
+        val description: TextView = view.findViewById(R.id.tvEquipmentDesc)
         image.setImageDrawable(context.getDrawable(R.drawable.ic_launcher_background))
         name.text = killteam.killteamname
         description.text = killteam.description
@@ -50,14 +56,6 @@ class FactionViewHolder(val context:Context, val view: View):RecyclerView.ViewHo
         val description: TextView = view.findViewById(R.id.tvEquipmentDesc)
         name.text = equip.eqname
         description.text = equip.eqdescription
-
-
-        view.setOnClickListener {
-            //val intent = Intent(context, KillteamInsideActivity::class.java)
-            //intent.putExtra("KILLTEAM_ID", id)
-            //context.startActivity(intent)
-             Toast.makeText(context, "Click on $id", Toast.LENGTH_SHORT).show()
-        }
     }
 
 

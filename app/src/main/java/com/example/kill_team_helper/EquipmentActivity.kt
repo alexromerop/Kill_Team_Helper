@@ -18,23 +18,15 @@ class EquipmentActivity : AppCompatActivity() {
         binding = ActivityKillteamBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         val killteamId = intent.getStringExtra("KILLTEAM_IDs")
 
-
-        val killTeam = Basedades.listKillTeam.find { it.killteamid == killteamId}
+        val killTeam = Basedades.listKillTeam.find { it.killteamid == killteamId }
         killTeam?.let {
-            val a = it.equipment
-            binding.killteamList.adapter = EquipmentsAdapter(a, this)
 
+            binding.killteamList.adapter = EquipmentsAdapter(it.equipment, this)
         }
-
-
-
-
-
-
-
     }
 
+
 }
+
